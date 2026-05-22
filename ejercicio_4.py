@@ -7,7 +7,10 @@ en que una unidad no exista en el diccionario.
 return, manejo de errores básicos con if key in dict.
 """
 
-# Diccionario con factores de conversión
+# Diccionario de conversión 
+from math import e
+
+
 conversiones = {
     "metros": {
         "centimetros": 100,
@@ -73,11 +76,16 @@ print("- millas")
 
 # Entradas del usuario
 cantidad = float(input("\nIngrese la cantidad: "))
-origen = input("Ingrese la unidad de origen: ").lower()
-destino = input("Ingrese la unidad de destino: ").lower()
+origen = input("Ingrese la unidad de origen: ")
+destino = input("Ingrese la unidad de destino: ")
+
 
 # Conversión
 resultado = convertir(cantidad, origen, destino)
 
 # Mostrar resultado
-print("Resultado:", resultado)
+print("Resultado:", resultado, destino)
+
+
+
+
