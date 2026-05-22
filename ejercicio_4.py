@@ -6,10 +6,8 @@ en que una unidad no exista en el diccionario.
 • Conceptos aplicados: Diccionarios, funciones con múltiples parámetros,
 return, manejo de errores básicos con if key in dict.
 """
-
 # Diccionario de conversión 
 from math import e
-
 
 conversiones = {
     "metros": {
@@ -79,13 +77,8 @@ cantidad = float(input("\nIngrese la cantidad: "))
 origen = input("Ingrese la unidad de origen: ")
 destino = input("Ingrese la unidad de destino: ")
 
-
 # Conversión
 resultado = convertir(cantidad, origen, destino)
 
 # Mostrar resultado
 print("Resultado:", resultado, destino)
-
-
-
-
