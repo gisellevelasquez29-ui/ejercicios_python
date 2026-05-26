@@ -9,6 +9,8 @@ return, manejo de errores básicos con if key in dict.
 # Diccionario de conversión 
 from math import e
 
+# diccioonario de conversiones con unidades de longitud y sus factores de conversión entre sí
+
 conversiones = {
     "metros": {
         "centimetros": 100,
@@ -46,7 +48,12 @@ conversiones = {
     }
 }
 
+
+
 # Función para convertir
+
+# funcion convertir que recibe una cantidad, la unidad de origen y la unidad de destino, y realiza la conversión 
+# utilizando el diccionario de conversiones. La función también maneja el caso en que una unidad no exista en el diccionario, devolviendo un mensaje de error adecuado.
 def convertir(cantidad, origen, destino):
 
     if origen in conversiones:
@@ -64,6 +71,7 @@ def convertir(cantidad, origen, destino):
 
 
 # Mostrar unidades disponibles
+
 print("UNIDADES DISPONIBLES:")
 print("- metros")
 print("- centimetros")
@@ -73,11 +81,14 @@ print("- millas")
 
 
 # Entradas del usuario
+# solicitamos al usuario que ingrese la cantidad a convertir, la unidad de origen y la unidad de
+#  destino, y luego llamamos a la función convertir para realizar la conversión y mostrar el resultado.
 cantidad = float(input("\nIngrese la cantidad: "))
 origen = input("Ingrese la unidad de origen: ")
 destino = input("Ingrese la unidad de destino: ")
 
 # Conversión
+# llamamos a la función convertir con los parámetros ingresados por el usuario y guardamos el resultado en la variable resultado
 resultado = convertir(cantidad, origen, destino)
 
 # Mostrar resultado
